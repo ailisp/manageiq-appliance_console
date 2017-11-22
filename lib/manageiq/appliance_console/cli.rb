@@ -20,7 +20,7 @@ module ApplianceConsole
 
     # database hostname
     def hostname
-      options[:internal] ? "localhost" : options[:hostname]
+      options[:standalone] || options[:internal] ? "localhost" : options[:hostname]
     end
 
     def local?(name = hostname)
